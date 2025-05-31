@@ -1,4 +1,5 @@
 import { TIngredient } from '@utils-types';
+import React from 'react';
 
 export type TIngredientsCategoryProps = {
   title: string;

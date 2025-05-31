@@ -27,7 +27,7 @@
 }
 
 .text {
-  font-family: Iceland;
+  font-family: Iceland, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
@@ -43,7 +43,7 @@
   border-radius: var(--common-border-radius-s);
   background: var(--background-element);
   min-height: 80px;
-  font-family: 'Jet Brains Mono';
+  font-family: 'Jet Brains Mono', serif;
   font-size: 16px;
   line-height: 24px;
   color: #f2f2f3;
