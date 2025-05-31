@@ -52,7 +52,8 @@ module.exports = {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
+      publicPath: '/stellar-burger/'
     }),
     new Dotenv()
   ],
@@ -82,13 +83,15 @@ module.exports = {
     }
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, './build'),
+    filename: 'bundle.js',
+    publicPath: '/stellar-burger/'
   },
   devServer: {
-    static: path.join(__dirname, './dist'),
+    static: path.join(__dirname, './build'),
     compress: true,
     historyApiFallback: true,
     port: 4000
-  }
+  },
+  mode: 'production'
 };
