@@ -57,19 +57,7 @@ module.exports = {
     new Dotenv()
   ],
   resolve: {
-    extensions: [
-      '*',
-      '.js',
-      '.jsx',
-      '.ts',
-      '.tsx',
-      '.json',
-      '.css',
-      '.scss',
-      '.png',
-      '.svg',
-      '.jpg'
-    ],
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss', '.png', '.svg', '.jpg'],
     alias: {
       '@pages': path.resolve(__dirname, './src/pages'),
       '@components': path.resolve(__dirname, './src/components'),
@@ -82,13 +70,15 @@ module.exports = {
     }
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, './build'),
+    filename: 'bundle.js',
+    publicPath: '/stellar-burger/'
   },
   devServer: {
-    static: path.join(__dirname, './dist'),
+    static: path.join(__dirname, './build'),
     compress: true,
     historyApiFallback: true,
     port: 4000
-  }
+  },
+  mode: 'production'
 };
